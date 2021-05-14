@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { TableDemo } from "./Table";
+import { Layout } from "antd";
+import Title from "antd/lib/typography/Title";
 
-function App() {
+
+
+const { Content } = Layout;
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout>
+        <Content>
+          <Title >React + Ant Design 制作表格</Title>
+          <TableDemo />
+        </Content>
+      </Layout>
   );
-}
+};
 
 export default App;
